@@ -1,0 +1,14 @@
+{
+  "name": "todo-frontend",
+  "version": "1.0.0",
+  "description": "static files",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sda squad",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
