@@ -2,14 +2,12 @@
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @EnableAutoConfiguration
-public class test {
+public class Bootstrap {
 
     @RequestMapping("/")
     String home() {
@@ -17,6 +15,6 @@ public class test {
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(test.class, args);
+        SpringApplication.run(Bootstrap.class, args);
     }
 }
