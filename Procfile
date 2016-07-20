@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/backend-1.0-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -jar target/todo-app-1.0-SNAPSHOT.jar
