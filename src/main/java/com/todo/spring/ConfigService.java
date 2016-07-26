@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ConfigService {
+
     @Autowired
     private Environment environment;
 
@@ -18,3 +19,4 @@ public class ConfigService {
         return Integer.parseInt(get(key));
     }
 }
+
