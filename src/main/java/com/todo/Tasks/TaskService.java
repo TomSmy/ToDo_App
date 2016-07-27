@@ -10,8 +10,7 @@ public class TaskService {
     @Autowired
     private TaskDao taskDao;
 
-    public Task addTask(Task task) {
-
-        return task;
+    public void addTask(Task task) {
+        taskDao.save(task);
     }
 }

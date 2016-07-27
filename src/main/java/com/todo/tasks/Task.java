@@ -13,9 +13,6 @@ import javax.persistence.*;
 @ToString
 public class Task {
 
-    public Task(){
-    }
-
     @Column(name = "tasks")
     @Setter
     @Getter

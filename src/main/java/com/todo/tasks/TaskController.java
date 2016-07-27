@@ -1,9 +1,13 @@
 package com.todo.tasks;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/tasks")
@@ -13,13 +17,17 @@ public class TaskController {
     private TaskService taskService;
 
     @RequestMapping(method = RequestMethod.GET)
-    public List<Task>{
-        return taskService;
+    public  List<Task> taskList(){
+
+
+    return  null;
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void addTask(Task task) {
-        taskService.addTask(Task task);
+    public void addTask(@RequestBody Task task) {
+        taskService.addTask(task);
     }
-
+    
 }
+
+
