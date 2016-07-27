@@ -27,7 +27,7 @@ public class TaskController {
     public void addTask(@RequestBody Task task) {
         taskService.addTask(task);
     }
-    
+
 }
 
 
