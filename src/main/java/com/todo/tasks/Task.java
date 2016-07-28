@@ -13,9 +13,13 @@ import javax.persistence.Id;
 @Table(name = "tasks")
 @ToString
 public class Task {
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "tasks")
+    private long id;
+
+    @Column(name = "description")
     @Setter
     @Getter
-    private String tasks;
+    private String description;
 }
