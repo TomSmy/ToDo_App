@@ -32,11 +32,12 @@ public class SpringConfig extends WebMvcConfigurerAdapter {
     @Autowired
     ConfigService configService;
 
-    @PostConstruct
+    @Bean
     public Flyway flyway() {
         Flyway flyway = new Flyway();
         flyway.setDataSource(configService.get(Keys.DB_URL), configService.get(Keys.DB_USER), configService.get(Keys.DB_PASSWORD));
-        flyway.migrate();
+        flyway.setTable("schema_version");
+//        flyway.migrate();
         return flyway;
     }
 
