@@ -19,7 +19,7 @@ public class TaskController {
     @RequestMapping(method = RequestMethod.GET)
     public  List<Task> taskList(){
 
-        return new ArrayList<>();
+        return taskService.getTasks();
     }
 
     @RequestMapping(method = RequestMethod.POST)
