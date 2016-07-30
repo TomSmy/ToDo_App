@@ -24,13 +24,26 @@ public class TaskService {
         taskDao.save(task);
     }
 
-    @RequestMapping(method= RequestMethod.GET)
+    public void deleteTask(Long id) {
+        Task taskToDelete = taskDao.findOne(id);
+
+        taskDao.delete(taskToDelete);
+        //taskDao.delete(task);
+    }
+
     public List getTasks() {
 //        taskDao.flush();
         return taskDao.findAll();
     }
 
-    public void replaceAllTasks(List<Task> newTasks) {
+    public boolean deleteTask2(Long id) {
+//        taskDao.flush();
+        taskDao.delete(id);
+        return true;
+    }
+
+
+    public void storeAllTasks(List<Task> newTasks) {
         taskDao.deleteAll();
         taskDao.save(newTasks);
     }

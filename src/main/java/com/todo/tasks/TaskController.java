@@ -1,14 +1,12 @@
 package com.todo.tasks;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@CrossOrigin(maxAge = 3600)
 @RestController
 @RequestMapping(value = "/tasks")
 public class TaskController {
@@ -26,6 +24,13 @@ public class TaskController {
     public void addTask(@RequestBody Task task) {
         taskService.addTask(task);
     }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+//    @RequestMapping(value = "/{id}", method = RequestMethod.OPTIONS)
+    public void deleteTask(@PathVariable Long id) {
+        taskService.deleteTask(id);
+    }
+
 
 }
 
