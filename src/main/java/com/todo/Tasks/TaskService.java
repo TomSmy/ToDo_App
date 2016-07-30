@@ -30,6 +30,10 @@ public class TaskService {
         taskDao.delete(taskToDelete);
         //taskDao.delete(task);
     }
+    public void updateTask(Task task) {
+//        Task taskToUpdate = taskDao.findOne(id);
+        taskDao.save(task);
+    }
 
     public List getTasks() {
 //        taskDao.flush();

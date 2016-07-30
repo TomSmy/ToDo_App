@@ -25,6 +25,11 @@ public class TaskController {
         taskService.addTask(task);
     }
 
+    @RequestMapping(method = RequestMethod.PUT)
+    public void updateTask(@RequestBody Task task) {
+        taskService.updateTask(task);
+    }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 //    @RequestMapping(value = "/{id}", method = RequestMethod.OPTIONS)
     public void deleteTask(@PathVariable Long id) {
