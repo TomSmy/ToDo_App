@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -19,7 +18,7 @@ public class TaskController {
     @RequestMapping(method = RequestMethod.GET)
     public  List<Task> taskList(){
 
-        return new ArrayList<>();
+        return taskService.getTasks();
     }
 
     @RequestMapping(method = RequestMethod.POST)

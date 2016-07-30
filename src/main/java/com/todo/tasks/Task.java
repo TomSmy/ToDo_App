@@ -3,7 +3,6 @@ package com.todo.tasks;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.data.annotation.*;
 
 import javax.persistence.*;
 import javax.persistence.Id;
